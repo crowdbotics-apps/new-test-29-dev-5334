@@ -10,6 +10,9 @@ class CustomText(models.Model):
     title = models.CharField(max_length=150,)
     r2 = models.ManyToManyField("home.Test", blank=True, related_name="customtext_r2",)
     r3 = models.ManyToManyField("users.User", blank=True, related_name="customtext_r3",)
+    r4 = models.ManyToManyField(
+        "home.HomePage", blank=True, related_name="customtext_r4",
+    )
 
     def __str__(self):
         return self.title

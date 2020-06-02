@@ -8,22 +8,23 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0004_auto_20200602_1854'),
+        ("home", "0004_auto_20200602_1854"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='customtext',
-            name='r1',
-        ),
+        migrations.RemoveField(model_name="customtext", name="r1",),
         migrations.AddField(
-            model_name='customtext',
-            name='r3',
-            field=models.ManyToManyField(blank=True, related_name='customtext_r3', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="r3",
+            field=models.ManyToManyField(
+                blank=True, related_name="customtext_r3", to=settings.AUTH_USER_MODEL
+            ),
         ),
         migrations.AlterField(
-            model_name='customtext',
-            name='r2',
-            field=models.ManyToManyField(blank=True, related_name='customtext_r2', to='home.Test'),
+            model_name="customtext",
+            name="r2",
+            field=models.ManyToManyField(
+                blank=True, related_name="customtext_r2", to="home.Test"
+            ),
         ),
     ]
