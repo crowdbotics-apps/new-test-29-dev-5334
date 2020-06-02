@@ -13,6 +13,7 @@ class CustomText(models.Model):
     r4 = models.ManyToManyField(
         "home.HomePage", blank=True, related_name="customtext_r4",
     )
+    r5 = models.BigIntegerField(null=True, blank=True,)
 
     def __str__(self):
         return self.title
