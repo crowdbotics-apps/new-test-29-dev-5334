@@ -52,3 +52,13 @@ class R2(models.Model):
 class R1(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+
+
+class R4(models.Model):
+    "Generated Model"
+    r4 = models.BigIntegerField()
+
+
+class R3(models.Model):
+    "Generated Model"
+    r3 = models.BigIntegerField()
