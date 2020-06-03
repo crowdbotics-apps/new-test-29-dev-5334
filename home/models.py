@@ -47,6 +47,13 @@ class Test(models.Model):
 class R2(models.Model):
     "Generated Model"
     r2 = models.BigIntegerField()
+    r1 = models.OneToOneField(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r2_r1",
+    )
 
 
 class R1(models.Model):
@@ -54,10 +61,17 @@ class R1(models.Model):
     r1 = models.BigIntegerField()
     r2 = models.OneToOneField(
         "home.R3",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+        related_name="r1_r2",
+    )
+    r3 = models.OneToOneField(
+        "home.CustomText",
         on_delete=models.CASCADE,
         null=True,
         blank=True,
-        related_name="r1_r2",
+        related_name="r1_r3",
     )
 
 
