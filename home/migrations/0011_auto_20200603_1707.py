@@ -9,18 +9,30 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0010_r1_r2'),
+        ("home", "0010_r1_r2"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='r1',
-            name='r3',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='r1_r3', to='home.CustomText'),
+            model_name="r1",
+            name="r3",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="r1_r3",
+                to="home.CustomText",
+            ),
         ),
         migrations.AddField(
-            model_name='r2',
-            name='r1',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='r2_r1', to=settings.AUTH_USER_MODEL),
+            model_name="r2",
+            name="r1",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="r2_r1",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

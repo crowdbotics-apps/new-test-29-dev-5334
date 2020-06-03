@@ -49,9 +49,9 @@ class R2(models.Model):
     r2 = models.BigIntegerField()
     r1 = models.OneToOneField(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r2_r1",
     )
 
@@ -68,9 +68,9 @@ class R1(models.Model):
     )
     r3 = models.OneToOneField(
         "home.CustomText",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="r1_r3",
     )
 
@@ -83,3 +83,13 @@ class R4(models.Model):
 class R3(models.Model):
     "Generated Model"
     r3 = models.BigIntegerField()
+
+
+class R67(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()
+
+
+class Rt(models.Model):
+    "Generated Model"
+    r1 = models.BigIntegerField()

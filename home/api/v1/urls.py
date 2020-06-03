@@ -7,6 +7,8 @@ from .viewsets import (
     R2ViewSet,
     R3ViewSet,
     R4ViewSet,
+    R67ViewSet,
+    RtViewSet,
     TestViewSet,
 )
 
@@ -27,6 +29,8 @@ router.register("r2", R2ViewSet)
 router.register("r1", R1ViewSet)
 router.register("r4", R4ViewSet)
 router.register("r3", R3ViewSet)
+router.register("r67", R67ViewSet)
+router.register("rt", RtViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
