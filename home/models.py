@@ -52,6 +52,13 @@ class R2(models.Model):
 class R1(models.Model):
     "Generated Model"
     r1 = models.BigIntegerField()
+    r2 = models.OneToOneField(
+        "home.R3",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r1_r2",
+    )
 
 
 class R4(models.Model):
