@@ -29,6 +29,13 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    r2 = models.OneToOneField(
+        "home.Test",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_r2",
+    )
 
     @property
     def api(self):
@@ -78,6 +85,14 @@ class R1(models.Model):
 class R4(models.Model):
     "Generated Model"
     r4 = models.BigIntegerField()
+    r2 = models.BigIntegerField(null=True, blank=True,)
+    r3 = models.OneToOneField(
+        "home.R67",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="r4_r3",
+    )
 
 
 class R3(models.Model):
